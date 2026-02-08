@@ -1,0 +1,20 @@
+public class SensorExchange {
+    public static void main(String[] args) {
+        // Initial sensor readings
+        int sensorA = 45;
+        int sensorB = 82;
+
+
+        System.out.format("Before Swap: A = %d, B = %d%n", sensorA, sensorB);
+
+
+        // Logic to swap without a third variable
+        sensorA = sensorA + sensorB; // A now holds the sum (127)
+        sensorB = sensorA - sensorB; // B is now (127 - 82) = 45
+        sensorA = sensorA - sensorB; // A is now (127 - 45) = 82
+
+
+        System.out.format("After Swap: A = %d, B = %d%n", sensorA, sensorB);
+    }
+}
+
