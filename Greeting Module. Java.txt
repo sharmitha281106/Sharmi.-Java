@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+
+public class GreetingModule {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+        
+        // Using format() instead of println()
+        System.out.format("Welcome to the startup, %s!%n", name);
+        System.out.format("We are glad to have you on board.%n");
+        
+        input.close();
+    }
+}
+
