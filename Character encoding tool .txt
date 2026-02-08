@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+
+public class ASCIIEncoder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a character to encode: ");
+        char inputChar = sc.next().charAt(0);
+        
+        // Casting char to int reveals its ASCII value
+        int asciiValue = (int) inputChar;
+        
+        System.out.format("The ASCII value of '%c' is: %d%n", inputChar, asciiValue);
+        
+        sc.close();
+    }
+}
+

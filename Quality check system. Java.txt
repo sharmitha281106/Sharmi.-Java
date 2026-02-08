@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+
+public class QualityCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter value for quality check: ");
+        int num = sc.nextInt();
+        boolean isPrime = num > 1;
+
+
+        // Optimized loop: only check up to the square root of num
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+
+        String status = isPrime ? "PASSED (Prime)" : "FAILED (Not Prime)";
+        System.out.format("Quality Check for %d: %s%n", num, status);
+        sc.close();
+    }
+}
+

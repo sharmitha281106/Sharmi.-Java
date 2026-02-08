@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class ComparisonEngine {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter three numbers (separated by space): ");
+        int a = input.nextInt(), b = input.nextInt(), c = input.nextInt();
+        
+        int highest;
+        // Logic to compare three values
+        if (a >= b && a >= c) {
+            highest = a;
+        } else if (b >= a && b >= c) {
+            highest = b;
+        } else {
+            highest = c;
+        }
+        
+        System.out.format("The highest value is: %d%n", highest);
+        input.close();
+    }
+}
+

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class TempConverter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter temperature in Celsius: ");
+        double celsius = sc.nextDouble();
+        
+        // Conversion formula: (C * 9/5) + 32
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        
+        System.out.format("%.2f°C is equal to %.2f°F%n", celsius, fahrenheit);
+        
+        // Simple weather alert logic
+        if (fahrenheit > 90) {
+            System.out.println("Alert: High temperature detected!");
+        }
+        
+        sc.close();
+    }
+}
+

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class TextAnalyzer {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter text: ");
+        String str = sc.nextLine().toLowerCase();
+        int vowels = 0, consonants = 0;
+
+
+        for (char ch : str.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') { // Ensure it's a letter
+                if ("aeiou".indexOf(ch) != -1) vowels++;
+                else consonants++;
+            }
+        }
+
+
+        System.out.format("Vowels: %d | Consonants: %d%n", vowels, consonants);
+        sc.close();
+    }
+}
+

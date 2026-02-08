@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+public class SecurityValidator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter security code: ");
+        int code = sc.nextInt();
+        int original = code, reversed = 0;
+
+
+        // Logic to reverse the numeric code
+        while (code != 0) {
+            int digit = code % 10;
+            reversed = reversed * 10 + digit;
+            code /= 10;
+        }
+
+
+        if (original == reversed) {
+            System.out.format("Code %d is VALID (Palindrome).%n", original);
+        } else {
+            System.out.format("Code %d is INVALID.%n", original);
+        }
+        sc.close();
+    }
+}
+

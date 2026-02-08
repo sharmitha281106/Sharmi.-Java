@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+
+public class NumberClassifier {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a number to classify: ");
+        int num = sc.nextInt();
+        
+        // Logic: Check if the remainder is zero when divided by 2
+        if (num % 2 == 0) {
+            System.out.format("%d is an EVEN number.%n", num);
+        } else {
+            System.out.format("%d is an ODD number.%n", num);
+        }
+        
+        sc.close();
+    }
+}
+

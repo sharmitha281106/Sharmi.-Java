@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class ReverseUnit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter transaction number: ");
+        int transaction = sc.nextInt();
+        int reversed = 0;
+
+
+        // Process reversal
+        while (transaction != 0) {
+            int digit = transaction % 10; // Extract last digit
+            reversed = reversed * 10 + digit; // Append to new number
+            transaction /= 10; // Remove last digit
+        }
+
+
+        System.out.format("Reversed Transaction ID: %d%n", reversed);
+        sc.close();
+    }
+}
+
